@@ -1,8 +1,8 @@
 import React from 'react'
-import { Ingredients } from "./ingredients";
-import { Instructions } from "./instructions";
+import Ingredients from "./ingredients";
+import Instructions from "./instructions";
 
-export const Meal = ({
+const Meal = ({
     name,
     img,
     ingredients,
@@ -18,3 +18,5 @@ export const Meal = ({
         </div>
     )
 }
+
+export default Meal

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import { Navbar } from './meal/navbar';
+import Navbar from './meal/navbar';
 
 export async function getServerSideProps() {
   const mealsJson = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?a=" + 'Canadian')

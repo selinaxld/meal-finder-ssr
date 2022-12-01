@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react";
 
-export const Instructions = ({
-    instructions
-}) => {
-    return(
-        <div>
-            <h1>Instructions</h1>
-            <p>{instructions}</p>
-        </div>
-    )
+export default function Instructions({ instructions }) {
+  return (
+    <div>
+      <h1>Instructions</h1>
+      <p>{instructions}</p>
+    </div>
+  );
 }

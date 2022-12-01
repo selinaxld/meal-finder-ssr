@@ -1,6 +1,6 @@
 import React from "react";
 import Link from 'next/link';
-import { Meal } from "./meal";
+import Meal from "./meal";
 
 export async function getServerSideProps({params}) {
   const ingredientKeys = [
