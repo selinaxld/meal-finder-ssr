@@ -16,7 +16,7 @@ export default function Home({meals}) {
       <Head><title>Meal Finder</title></Head>
       <div className='grid'>
         {meals.map((meal) => (
-          <Link href={`/meal/${meal.idMeal}`}>
+          <Link href={`/meal/${meal.idMeal}`} key={meal.idMeal}>
               <img src={meal.strMealThumb} style={{height: '300px', width: '300px'}}/>
               <h3>{meal.strMeal}</h3>
           </Link>
