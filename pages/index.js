@@ -1,11 +1,27 @@
-import { MealContainer } from './components/mealContainer';
-import { Navbar } from './components/navbar';
+import React from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+import { Navbar } from './meal/navbar';
 
-export default function Home() {
+export async function getServerSideProps() {
+  const mealsJson = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?a=" + 'Canadian')
+      .then((response) => response.json());
+  const meals = mealsJson.meals
+  return { props: { meals } }
+}
+
+export default function Home({meals}) {
   return (
     <div>
-      <Navbar />
-      <MealContainer />
+      <Head><title>Meal Finder</title></Head>
+      <div className='grid'>
+        {meals.map((meal) => (
+          <Link href={`/meal/${meal.idMeal}`}>
+              <img src={meal.strMealThumb} style={{height: '300px', width: '300px'}}/>
+              <h3>{meal.strMeal}</h3>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }
