@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
 import Navbar from './meal/navbar';
 
 export async function getServerSideProps() {
@@ -13,7 +12,7 @@ export async function getServerSideProps() {
 export default function Home({meals}) {
   return (
     <div>
-      <Head><title>Meal Finder</title></Head>
+      <Navbar />
       <div className='grid'>
         {meals.map((meal) => (
           <Link href={`/meal/${meal.idMeal}`} key={meal.idMeal}>

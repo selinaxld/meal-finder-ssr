@@ -72,7 +72,7 @@ export async function getServerSideProps({params}) {
 export default function MealContainer({mealDetails}) {
   return (
     <div>
-      <Link href='/'>
+      <Link className='backButton' href='/'>
         Back
       </Link>
     <div className='Meal'>

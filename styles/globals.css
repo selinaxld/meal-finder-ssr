@@ -9,9 +9,10 @@
 }
 
 .grid {
+  margin: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 12px;
+  column-gap: 100px;
 }
 
 .item {
@@ -78,4 +79,12 @@ h1 {
   padding: 10px;
   border-color: antiquewhite;
   border-radius: 3px;
+}
+
+.backButton {
+  padding: 5px;
+  margin: 15px;
+  border-radius: 5px;
+  border-color: #6E5736;
+  background-color: antiquewhite;
 }
